@@ -17,7 +17,7 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
     "age": 15
 }
 ```
-- Response
+- Response:
 
 ```json
 {
@@ -34,7 +34,7 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
 }
 ```
 
-- Screenshot
+- Screenshot:
 ![create_user](public/screenshots/create_user.png)
 
 ---
@@ -90,7 +90,8 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
     ]
 }
 ```
-- Screenshot
+
+- Screenshot:
 ![get_user_by_condition](public/screenshots/get_user_by_condition.png)
 
 ---
