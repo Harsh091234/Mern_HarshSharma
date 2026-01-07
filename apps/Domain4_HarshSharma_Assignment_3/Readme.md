@@ -10,12 +10,16 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
 - Route: `/api/user/create`
 - Inserts a new user into the `users` collection.
 -  Request:
+```json
 {
     "name": "harsh",
     "email": "harsh21@mail.com",
     "age": 15
 }
+```
 - Response
+
+```json
 {
     "success": true,
     "message": "User created successfully",
@@ -28,6 +32,8 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
         "__v": 0
     }
 }
+```
+
 - Screenshot
 ![create_user](public/screenshots/create_user.png)
 
@@ -38,6 +44,7 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
 - Route: `/api/user/get-users`
 - Description: Fetch all users.
 - Response:
+```json
 {
     "success": true,
     "message": "Users found",
@@ -60,7 +67,7 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
         }
     ]
 }
-
+```
 ---
 
 #### Get Users By Age Condition
@@ -70,6 +77,7 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
 - Description: Fetch users with age greater than the provided value.
 - Query Parameter: age (required, number)
 - Response:
+```json
 {
     "success": true,
     "count": 1,
@@ -81,6 +89,7 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
         }
     ]
 }
+```
 - Screenshot
 ![get_user_by_condition](public/screenshots/get_user_by_condition.png)
 
@@ -96,6 +105,7 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
 - page (default: 1)
 - limit (default: 5)
 - Response
+```json
 {
     "success": true,
     "totalUsers": 2,
@@ -120,7 +130,7 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
         }
     ]
 }
-
+```
 ---
 
 #### Update User Role
@@ -129,10 +139,13 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
 - Route: `/api/user/role/harsh21@gmail.com`
 - Description: Update the role of a specific user.
 - Request:
+```json
 {
     "role": "admin"
 }
+```
 - Response:
+```json
 {
     "success": true,
     "message": "User role updated successfully",
@@ -145,23 +158,26 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
         "__v": 0
     }
 }
+```
 - Screenshot
 ![update_user_role](public/screenshots/update_user_role.png)
 
 ---
 
-4.6 Increment Age For All Users
+#### Increment Age For All Users
 
 - Method: PATCH
 - Route: `/api/user/increment-age`
 - Description: Increment age field of all users by 1.
 - Response:
+```json
 {
     "success": true,
     "message": "Age incremented by 1 for all users",
     "matchedCount": 2,
     "modifiedCount": 2
 }
+```
 - Screenshot
 ![age_increment](public/screenshots/age_increment.png)
 
@@ -173,10 +189,12 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
 - Route: `/api/user/harsh@mail.com`
 - Description: Delete a single user based on email.
 - Response:
+```json
 {
     "success": true,
     "message": "User deleted successfully"
 }
+```
 - Screenshot:
 ![delete_by_email](public/screenshots/delete_by_email.png)
 
@@ -188,10 +206,12 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
 - Route: `/api/user-above-age?age=20`
 - Description: Delete all users with age greater than provided value.
 - Response:
+```json
 {
     "success": true,
     "message": "Users above age 20 deleted successfully"
 }
+```
 - Screenshot:
 ![delete_above_age](public/screenshots/delete_above_age.png)
 
@@ -204,10 +224,12 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
 - Description: Drops the entire users collection.
 - Warning: This deletes all data permanently.
 - Response:
+```json
 {
     "success": true,
     "message": "User collection dropped successfully"
 }
+```
 - Screenshot:
 ![delete_collection](public/screenshots/delete_collection.png)
 
