@@ -29,7 +29,7 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) using N
     }
 }
 - Screenshot
-![create_user](/public/screenshots/create_user.png)
+![create_user](public/screenshots/create_user.png)
 
 ---
 
