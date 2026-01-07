@@ -9,7 +9,7 @@ interface CastCardProps {
 
 const CastCard = ({ actor }: CastCardProps) => {
   const { data: imageUrl, isLoading } = useGetActorImageQuery(actor.trim());
-console.log(imageUrl)
+
   return (
     <Card className="text-center">
       <CardContent className="p-3 space-y-2">

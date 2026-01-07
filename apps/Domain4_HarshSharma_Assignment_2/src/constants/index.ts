@@ -20,3 +20,4 @@ export const trendingMovies = [
   "Top Gun: Maverick",
   "Oppenheimer",
 ];
+

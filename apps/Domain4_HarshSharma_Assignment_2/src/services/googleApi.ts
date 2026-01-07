@@ -16,14 +16,23 @@ export const googleApi = createApi({
           q: actorName,
           num: 1,
         },
-         transformResponse: (response: any) =>
-        response.items?.[0]?.image?.thumbnailLink ??
-        `https://ui-avatars.com/api/?name=${encodeURIComponent(actorName)}`,
+        transformResponse: (response: any) =>
+          response.items?.[0]?.image?.thumbnailLink ??
+          `https://ui-avatars.com/api/?name=${encodeURIComponent(actorName)}`,
+      }),
     }),
+
+    getYouTubeTrailer: builder.query<{ videoId: string }, string>({
+      query: (title) => {
+        const query = encodeURIComponent(`${title} trailer`);
+        return `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&type=video&maxResults=1&key=${import.meta.env.VITE_GOOGLE_CUSTOM_SEARCH_API_KEY}`;
+      },
+      transformResponse: (response: any) => {
       
-      
+        return { videoId: response.items?.[0]?.id?.videoId };
+      },
     }),
   }),
 });
 
-export const { useGetActorImageQuery } = googleApi;
+export const { useGetActorImageQuery, useGetYouTubeTrailerQuery } = googleApi;
