@@ -8,13 +8,16 @@
 # 1. Clone the repository
 git clone https://github.com/Harsh091234/its_mfs.git
 
-# 2. Install frontend dependencies
+# 2. Move to its_mfs
+cd its_mfs
+
+# 3. Install frontend dependencies
 pnpm --filter ./apps/Domain4_HarshSharma_Assignment_2 install
  
-# 3. Create .env file in Domain4_HarshSharma_Assignment_2 folder
+# 4. Create .env file in Domain4_HarshSharma_Assignment_2 folder
 # (see .env setup below)
 
-# 4. Start frontend dev server (in a new terminal)
+# 5. Start frontend dev server (in a new terminal)
 
 pnpm --filter ./apps/Domain4_HarshSharma_Assignment_2 dev
 
